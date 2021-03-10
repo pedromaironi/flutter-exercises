@@ -1,6 +1,8 @@
-main(List<String> args) {
+void main(List<String> args) {
   // ignore: unused_local_variable, unnecessary_new
-  final wolverine = new Heroe('Pedro', 'Regeneracion');
+  String name;
+  String poder;
+  final wolverine = Heroe(name: 'Pedro', poder: 'volar');
 
   print(wolverine);
 }
@@ -10,14 +12,15 @@ class Heroe {
   String name;
   String poder;
 
-  Heroe(String name, String poder) {
+/*
+  Heroe({String name, String poder}) {
     this.name = name;
     this.poder = poder;
   }
+*/
 
-  String toString() {
-    // ignore: todo
-    // TODO: implement toString
-    return '${this.name} - ${this.poder}';
-  }
+  Heroe({this.name, this.poder});
+
+  @override
+  String toString() => '$name - $poder';
 }
