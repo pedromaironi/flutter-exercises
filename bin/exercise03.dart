@@ -20,3 +20,5 @@ String Hello() {
 String MiNombre({String nombre, String apellido}) {
   return ('$nombre $apellido');
 }
+
+String saludar_dos({String name, String lastName}) => '$name $lastName';
